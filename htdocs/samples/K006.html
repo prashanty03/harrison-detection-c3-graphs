@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <link href="/css/c3.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="chart"></div>
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="/js/c3.js"></script>
+    <script>
+
+      var chart = c3.generate({
+        data: {
+          url: '/data/k006t30.csv'
+        },
+          axis: {
+              x: {
+                  type: 'category',
+                  categories: ['128x96', '256x192', '385x289', '512x384', '640x480', '768x576', '897x673', '1024x768', '1152x864', '1280x960']
+              }
+          }
+      });
+
+      setTimeout(function () {
+        chart.load({
+            url: '/data/k006t40.csv'
+        });
+      }, 2000);
+
+      setTimeout(function () {
+          chart.load({
+              url: '/data/k006t50.csv'
+          });
+      }, 4000);
+
+      setTimeout(function () {
+          chart.load({
+              url: '/data/k006t60.csv'
+          });
+      }, 6000);
+
+      setTimeout(function () {
+          chart.load({
+              url: '/data/k006t70.csv'
+          });
+      }, 10000);
+
+      setTimeout(function () {
+          chart.load({
+              url: '/data/k006t80.csv'
+          });
+      }, 10000);
+
+    </script>
+  </body>
+</html>
